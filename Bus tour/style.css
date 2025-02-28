@@ -1,0 +1,394 @@
+/* General styles for the navigation bar*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Hamburger Menu Styles */
+  .hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Show the hamburger menu on mobile */
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav-links by default on mobile */
+      flex-direction: column; /* Stack links vertically */
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #333;
+      padding: 10px 0;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show navigation links when active */
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+    }
+    /*end of navbar*/
+
+  }
+
+h1{
+    color:black;
+    text-align:center
+}
+
+h2{
+    color: navy;
+    font-family:cursive;
+    text-align:center
+}
+
+/*cards*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid maroon;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Adds a deeper shadow */
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Ensures 4 cards per row */
+@media (min-width: 1024px) {
+  .card {
+      flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+      flex: 1 1 100%; /* 1 card per row */
+  }
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+    p{
+        color: black;
+    }
+
+      ul {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+      }
+
+      /*button made more dynamic with styles*/
+
+      .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  background-color: maroon;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+
+/* Hover effect */
+.button:hover {
+  background-color:black;
+}
+
+/* Active effect */
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Dynamic "clicked" state animation */
+.button.clicked {
+  animation: pulse 0.5s ease;
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+      p{
+        font-size: large;
+        color:navy;
+      }
+
+      body,  html  {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: whitesmoke;
+        height: 100%;
+        margin: 0;
+    }
+   
+       /*java start*/
+
+   /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide Styles */
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.dot-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+
+/*contactus container style*/
+/* Center the container using CSS Grid */
+.container {
+    display: grid;
+    place-items: center;  /* Center both horizontally and vertically */
+    height: 20%;         /* Full viewport height */
+  }
+
+  .footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+/*Reservation .html*/
+/*centering of the paragraph*/
+.center-text {
+  text-align: center;
+}
+
+/*form in the Reservation.html file*/
+.form-container {
+  background: burlywood;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-container form {
+  width: 100%;
+}
+
+.form-container label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.form-container input, 
+.form-container select, 
+.form-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: maroon;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button:hover {
+  background-color: black;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<section>
+<div class="form-container">
+    <h2>Brilliant adventures</h2>
+    <form id="bookingForm" action="process_booking.php" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+    
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+            <option value="">Select Destination</option>
+            <option value="Masai Mara">Masai Mara</option>
+            <option value="Lake Nakuru">Lake Nakuru</option>
+            <option value="Hells Gate">Hells Gate</option>
+            <option value="Tsavo West National Park">Tsavo West National Park</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Diani">Diani</option>
+        </select>
+    
+        <label for="date">Travel Date:</label>
+        <input type="date" id="date" name="date" required>
+    
+        <label for="requests">Special Requests:</label>
+        <textarea id="requests" name="requests" rows="4" placeholder="Any special requests?"></textarea>
+    
+        <button type="submit">Book Now</button>
+    </form>
+    
+    <div id="responseMessage"></div> <!-- Message for success/error feedback -->
+    
+    
+
+</div>
+
+    <h2> We also perform special request to any other destination🌴 Feel free to contact us 👇</h2>
+
+    <h3>📞 Call us: <a href="tel:+254796030422">+254796030422</a></h3>
+    <h3>📧 Email: [info@yourtravelagency.com]</h3>
+    <h3>🌐 Visit: [www.yourtravelagency.com]</h3>
+</section>
